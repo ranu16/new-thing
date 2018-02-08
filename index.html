@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soul Mate</title>
+	<!-- 
+	-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+	<meta charset="utf-8">
+</head>
+<body class="container">
+<header>
+	<img src="image.gif">
+
+
+		<nav class="yuvi">
+		<ul>
+
+			<li><a href="home.html">Home</a></li>
+			<li><a href="chartleaders.html">Chartleaders</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+
+		</ul>
+
+	</nav>
+	</header>
+<section id="meter-section">
+	<div id="love">
+	<img src="love.jpg">
+	</div>
+	<div id="wrapper">
+	<svg id="meter">
+	    <circle id="outline_curves" class="circle outline"  cx="50%" cy="50%">
+	    </circle>
+	    <circle id="low" class="circle range" cx="50%" cy="50%" stroke="#FDE47F">
+	    </circle>
+	    <circle id="avg" class="circle range" cx="50%" cy="50%" stroke="#7CCCE5">
+	    </circle>
+	    <circle id="high" class="circle range" cx="50%" cy="50%" stroke="#E04644">
+	    </circle>
+	    <circle id="mask" class="circle" cx="50%" cy="50%" >
+	    </circle>
+	    <circle id="outline_ends" class="circle outline" cx="50%" cy="50%">
+	    </circle>
+	</svg>
+	<img id="meter_needle" src="svg-meter-gauge-needle.svg" alt="">
+	<input id="slider" type="range" min="0" max="100" value="0" /> 
+	<label id="lbl" id="value" for="">0%</label>
+	</div>
+ 
+
+	<h2 id="h2"></h2>
+	<h3 id="percent"></h3>
+</section>
+<div class="loginform bordered" >
+
+<section id="main" class="main">
+	Welcome, find your soul mate</b>
+<div id="loginform">
+	<form action="api/login" method="post">
+		<label for= "username">Your Name : </label>
+		<input type="text" name="Your Name" id="username"> <br>
+		<label for= "crushname">Crush's Name : </label>
+		<input type="text" name="Crush's Name" id="crushname"><br>
+		<input type="checkbox" name="remember" id="remember">
+		<label for= "remember">remember me </label><br>
+		<div id="errorshown"></div>
+		<input type="submit" name="loginbutton" value ="submit" id="submit">
+		<input type="reset" name="cancelbutton" value ="cancel"><br>
+		<br>
+
+	</form>
+	</div>
+	<div id="loggedin">
+		<button id="logoutbutton">Logout</button>
+	
+</div>
+	<div id="resultlist">
+		<button id="togglebutton">hide</button>
+		<div id="results">
+	Tips and Advises.
+         </div>
+</div>
+
+</section>
+</div>
+
+
+<footer>
+	&copy; abhishek singh
+
+</footer>
+
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="java.js">
+
+
+</script>
+
+</body>
+
+</html>
