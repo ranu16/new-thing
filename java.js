@@ -45,8 +45,8 @@ var togglebutton =$("#togglebutton");
 togglebutton.on("click",function (){
 	console.log("botton clicked");
 	results.toggle(500);
-	if (togglebutton.text()==="hide") {togglebutton.text("show");}
-	 else {togglebutton.text("hide");};
+	if (togglebutton.text()==="hide suggestions") {togglebutton.text("show suggestions");}
+	 else {togglebutton.text("hide suggestions");};
 
 	 
 	});
@@ -71,6 +71,12 @@ for (var i = 0; i < num1.length; i++) {
 
 	var diff=Math.abs(sum-sum1);
 	lovep=(100-diff/2);
+
+	//limit to lovep//
+	if (lovep<0) {lovep=0}
+
+		if (lovep>100) {lovep=100}
+
 	   var percent = lovep;
 		    var meter_value = semi_cf - ((percent * semi_cf) / 100);
 		    mask.setAttribute('stroke-dasharray', meter_value + ',' + cf);
@@ -80,11 +86,32 @@ for (var i = 0; i < num1.length; i++) {
 	if (lovep===100) {var response="<div>"+"Dear,"+
 	 "<div class='title'>"+ $("#username").val() +"</div>"+
 	 "<div>" + "you and "+ $("#crushname").val() + " are fabulous soul to meet , you both are just incredible in this world.God want to see you both together" +"</div>"+"</div>"}
+
+	 if (lovep<100&&lovep>=90) {var response="<div>"+"Dear,"+
+	 "<div class='title'>"+ $("#username").val() +"</div>"+
+	 "<div>" + "you and "+ $("#crushname").val() + " can have very good bonding , this value is a proof of it." +"</div>"+"</div>"}
+
+	 if (lovep<90&&lovep>=80) {var response="<div>"+"Dear,"+
+	 "<div class='title'>"+ $("#username").val() +"</div>"+
+	 "<div>" + "you and "+ $("#crushname").val() + " are loved ones of each other, you will be a good pair." +"</div>"+"</div>"}
 	
+	if (lovep<80&&lovep>=70) {var response="<div>"+"Dear,"+
+	 "<div class='title'>"+ $("#username").val() +"</div>"+
+	 "<div>" + "you and "+ $("#crushname").val() + " can have good understanding, try it to be make better" +"</div>"+"</div>"}	
+
+	 	if (lovep<70&&lovep>=55) {var response="<div>"+"Dear,"+
+	 "<div class='title'>"+ $("#username").val() +"</div>"+
+	 "<div>" + "you and "+ $("#crushname").val() + " can have good understanding, God bless you" +"</div>"+"</div>"}	
+
+	 	if (lovep<55) {var response="<div>"+"Dear,"+
+	 "<div class='title'>"+ $("#username").val() +"</div>"+
+	 "<div>" + "you and "+ $("#crushname").val() + " are not good ones to meet, try with another" +"</div>"+"</div>"}	
+		$("#meter_needle").show();
+		$("#meter").show();
 	
 	 $("#results").append(response);
 	 $("#percent").empty();
-	 $("#percent").append(lovep);
+	 $("#percent").append(lovep+"%");
 	 $("#h2").text("Your love percent is :");
 	$("#percent").show();
 
@@ -110,6 +137,8 @@ $("#loginform").on("submit",function(data){
 		console.log("error");
 		$("#loginform").hide();
 	$("#loggedin").show();
+	$("#results").show();
+	$("#togglebutton").show();
 	displayAbhi(data); 
 
 	})
@@ -127,11 +156,16 @@ $("#loginform").on("submit",function(data){
 $("#logoutbutton").on('click',function(){
 
 	$("#loginform").show();
+	$("#results").hide();
+	$("#togglebutton").hide();
 	$("#loggedin").hide();
 	$("#percent").hide();
 	$("#h2").empty();
 	results.empty();
 	results.text("Please login to see all the information.")
+
+		$("#meter_needle").hide();
+		$("#meter").hide();
 })
 
 });

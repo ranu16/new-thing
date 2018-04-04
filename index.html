@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Soul Mate</title>
+	<title>love calculator</title>
 	<!-- 
 	-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -10,13 +10,12 @@
 	<meta charset="utf-8">
 </head>
 <body class="container">
-<header>
-	<img src="image.gif">
 
-
+    <header>
+    	<img src="image.gif">
+	
 		<nav class="yuvi">
 		<ul>
-
 			<li><a href="home.html">Home</a></li>
 			<li><a href="chartleaders.html">Chartleaders</a></li>
 			<li><a href="about.html">About</a></li>
@@ -48,21 +47,22 @@
 	<img id="meter_needle" src="svg-meter-gauge-needle.svg" alt="">
 	<input id="slider" type="range" min="0" max="100" value="0" /> 
 	<label id="lbl" id="value" for="">0%</label>
+
+		<h2 id="h2"></h2>
+	<h3 id="percent"></h3>
 	</div>
  
 
-	<h2 id="h2"></h2>
-	<h3 id="percent"></h3>
 </section>
+
 <div class="loginform bordered" >
 
 <section id="main" class="main">
-	Welcome, find your soul mate</b>
 <div id="loginform">
 	<form action="api/login" method="post">
 		<label for= "username">Your Name : </label>
 		<input type="text" name="Your Name" id="username"> <br>
-		<label for= "crushname">Crush's Name : </label>
+		<label for= "crushname">Crush Name : </label>
 		<input type="text" name="Crush's Name" id="crushname"><br>
 		<input type="checkbox" name="remember" id="remember">
 		<label for= "remember">remember me </label><br>
@@ -74,11 +74,11 @@
 	</form>
 	</div>
 	<div id="loggedin">
-		<button id="logoutbutton">Logout</button>
+		<button id="logoutbutton">Back</button>
 	
 </div>
 	<div id="resultlist">
-		<button id="togglebutton">hide</button>
+		<button id="togglebutton">hide suggestions</button>
 		<div id="results">
 	Tips and Advises.
          </div>

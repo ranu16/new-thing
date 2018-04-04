@@ -69,9 +69,31 @@ header{
 		border-radius:8px;
 
 	}
-	#loginform{
 
-		margin: 0 auto;
+	#results{display: none;
+			position: absolute;
+		top: 600px;
+		right: 400px;
+		left: 40px;
+	}
+	#togglebutton{display: none;
+			position: absolute;
+		top: 540px;
+		right: 400px;
+		left: 10px;}
+
+	#logoutbutton{
+			position: absolute;
+		top: 740px;
+		right: 400px;
+		left: 10px;}
+
+	#loginform{
+		position: absolute;
+		top: 600px;
+		right: 400px;
+		left: auto;
+
 		width: 50%;
 		height: 160px;
 		border-radius: 8px black;
@@ -124,17 +146,15 @@ header{
 	.title{
 		font-size: 30px;
 		font-style: italic;
+		color: tomato;
 	}
 
 	a{
 		color: white;
+		text-decoration: none;
 	}
-	#togglebutton{
-		display: inline-block;
-		vertical-align: top;
-	}
-	#results{
-		display: inline-block;
+
+
 	}
 	#errorshown{
 		color: red;
@@ -152,8 +172,17 @@ header{
 		font-weight: bold;
 		display: inline-block;
 	}
-<------meter section start----->
 	#meter-section{
+		display: inline-block;
+	}
+
+	.resize{
+
+		position: fixed;
+		right: 0px;
+		top: 0px;
+		left: 0px;
+		bottom: 50px;
 	}
 	#love{
 
@@ -184,7 +213,9 @@ header{
 		.range { stroke-width: 60; }
 		 #lbl {
 		    position: absolute;
-		    left: 200px;
+		    left: 400px;
+		     display: none;
+
 		}
 		#slider {
 			position: absolute;
@@ -194,7 +225,27 @@ header{
 		    right: 0;
 		    top: 560px;
 		    width: 50%;
+		    display: none;
 		}
+	    h3 {
+			position: absolute;
+		    cursor: pointer;
+		    left: 65%;
+		    margin: auto;
+		    right: 0;
+		    top: 565px;
+		    width: 50%;}
+		      h2 {
+			position: absolute;
+		    cursor: pointer;
+		    left: 40%;
+		    margin: auto;
+		    right: 0;
+		    top: 565px;
+		    width: 50%;}
+
+
+
 		#lbl {
 		    background-color: #4B4C51; 
 		    border-radius: 2px;
@@ -204,7 +255,7 @@ header{
 		    font-weight: bold;
 		    padding: 4px 4px 2px 4px;
 		    
-		    top: 57%;
+		    top: 80%;
 		}
 		#meter_needle {
 		    height: 40%;
