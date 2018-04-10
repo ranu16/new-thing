@@ -124,27 +124,15 @@ $("#loginform").on("submit",function(data){
 	
 	var username= $("#username").val();
 	var crushname= $("#crushname").val();
-	if (username && crushname) {	$.post("api/login",{},function(data){
-		console.log("success::"+data);
+	if (username && crushname) {
 		$("#errorshown").empty();
-
-	
-		
-	
-
-	 })
-	.fail(function(){
-		console.log("error");
-		$("#loginform").hide();
+				$("#loginform").hide();
 	$("#loggedin").show();
 	$("#results").show();
 	$("#togglebutton").show();
-	displayAbhi(data); 
+	displayAbhi(data);
 
-	})
-	.done(function(data){
 
-	})
     } else {
     	console.log("error happened");
     	$("#errorshown").text("Both names are mandetory!");
